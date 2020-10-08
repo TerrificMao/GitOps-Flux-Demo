@@ -97,3 +97,4 @@ items:
       port: 9300
     selector:
       app: elasticsearch
+
