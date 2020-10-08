@@ -5,6 +5,7 @@ items:
   kind: Deployment
   metadata:
     name: kibana
+    namespace: elk
   spec:
     replicas: 1
     template:
@@ -26,6 +27,7 @@ items:
   kind: Service
   metadata:
     name: kibana
+    namespace: elk
   spec:
     type: NodePort
     ports:
@@ -39,6 +41,7 @@ items:
   kind: Deployment
   metadata:
     name: elasticsearch
+    namespace: elk
   spec:
     replicas: 1
     template:
@@ -71,6 +74,7 @@ items:
   kind: Service
   metadata: 
     name: elasticsearch-nodeport
+    namespace: elk
   spec:
     type: NodePort
     ports:
@@ -88,6 +92,7 @@ items:
   kind: Service
   metadata:
     name: elasticsearch
+    namespace: elk
   spec:
     clusterIP: None
     ports:
